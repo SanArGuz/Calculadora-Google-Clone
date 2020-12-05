@@ -1,0 +1,98 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.calculadora-container {
+  background-color: white;
+  margin-top: 40px;
+  width: 650px;
+  border-radius: 5px;
+  padding: 15px;
+  border: 1px solid #dadce0;
+}
+
+input {
+  width: 96%;
+  margin: 6px;
+  height: 2rem;
+  text-align: right;
+  font-size: 2rem;
+  outline: none;
+  border: 1px solid #dfe1e5;
+}
+
+input:focus {
+  border: 1px solid #4285f4;
+}
+
+p {
+  width: 96%;
+  margin: 6px;
+  text-align: right;
+}
+
+button {
+  width: 82px;
+  height: 32px;
+  margin: 3px;
+  margin-top: 6px;
+  border: none;
+  border-radius: 5px;
+  background-color: #dadce0;
+  outline: none;
+  cursor: pointer;
+}
+
+button:active {
+  border: 1px solid #808185;
+}
+
+.number {
+  background-color: #f1f3f4;
+}
+
+.number:active {
+  border: 1px solid #9d9e9e;
+}
+
+.number:hover {
+  background-color: #f7f9fa;
+}
+
+.equal {
+  background-color: #4285f4;
+  color: white;
+  font-weight: 900;
+}
+
+.equal:active {
+  -webkit-box-shadow: 0px 11px 37px 0px rgba(66, 133, 244, 0.61);
+  box-shadow: 0px 10px 20px -5px rgba(66, 133, 244, 0.61);
+  border: 1px solid #154ba1;
+}
+
+.point {
+  font-weight: 900;
+  background-color: #f1f3f4;
+}
+
+.degree {
+  width: 175px;
+  height: 32px;
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 13px;
+}
+
+button div {
+  color: gray;
+}
+
+#rad {
+  color: black;
+}
+
+#ans {
+  color: gray;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/styles.css" />
+    <script src="./JS/script.js"></script>
+  </head>
+  <body>
+    <div class="calculadora-container">
+      <div class="calculadora-display">
+        <p id="ans"></p>
+        <input type="text" id="result" />
+      </div>
+      <div class="calculadora-botones">
+        <button class="degree" onclick="toggle_degree()">
+          <div id="rad">Rad</div>
+          <div>|</div>
+          <div id="deg">Deg</div>
+        </button>
+        <button onclick="agregar('!')">x!</button>
+        <button>(</button>
+        <button onclick="agregar(')')">)</button>
+        <button onclick="agregar('%')">%</button>
+        <button onclick="limpiar()">AC</button>
+        <button onclick="toggle_inversas()">Inv</button>
+        <button id="sin" onclick="agregar(sin_arg)">sin</button>
+        <button onclick="agregar('ln(')">ln</button>
+        <button class="number" onclick="agregar(7)">7</button>
+        <button class="number" onclick="agregar(8)">8</button>
+        <button class="number" onclick="agregar(9)">9</button>
+        <button onclick="agregar(' ÷ ')">÷</button>
+        <button onclick="agregar('𝝅')">𝝅</button>
+        <button id="cos" onclick="agregar(cos_arg)">cos</button>
+        <button onclick="agregar('log(')">log</button>
+        <button class="number" onclick="agregar(4)">4</button>
+        <button class="number" onclick="agregar(5)">5</button>
+        <button class="number" onclick="agregar(6)">6</button>
+        <button onclick="agregar(' x ')">x</button>
+        <button onclick="agregar('e')">e</button>
+        <button id="tan" onclick="agregar(tan_arg)">tan</button>
+        <button onclick="agregar('√(')">√</button>
+        <button class="number" onclick="agregar(1)">1</button>
+        <button class="number" onclick="agregar(2)">2</button>
+        <button class="number" onclick="agregar(3)">3</button>
+        <button onclick="agregar(' - ')">-</button>
+        <button onclick="ans()">Ans</button>
+        <button onclick="agregar('E')">EXP</button>
+        <button onclick="agregar('^')">x^y</button>
+        <button class="number" onclick="agregar(0)">0</button>
+        <button class="number point">.</button>
+        <button class="equal" onclick="igual()">=</button>
+        <button onclick="agregar(' + ')">+</button>
+      </div>
+    </div>
+  </body>
+</html>
