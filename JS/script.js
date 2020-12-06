@@ -48,7 +48,17 @@ function ans() {
 
 function agregar(value) {
   const result = document.getElementById('result').value
-  document.getElementById('result').value = result + value
+  let lastChart = result.charAt(result.length - 1)
+  let lastChart2 = result.charAt(result.length - 2)
+  if (value == ' - ' && (lastChart == ' ' || lastChart == '(') && lastChart !== '-') {
+    document.getElementById('result').value = result + '-'
+  } else if ((value == ' x ' || value == ' + ' || value == ' ÷ ') && (lastChart2 == 'x' || lastChart2 == '+' || lastChart2 == '÷' || lastChart2 == '-')) {
+    document.getElementById('result').value = result
+  } else if (value == ' - ' && lastChart == '-') {
+    document.getElementById('result').value = result
+  } else {
+    document.getElementById('result').value = result + value
+  }
 }
 
 function limpiar() {
@@ -65,13 +75,13 @@ function igual() {
   for (let i = 0; i < numeros.length; i++) {
     if (numeros[i].includes('𝝅')) {
       let pi = Math.PI
-      numeros[i] = `${pi}`
+      numeros[i] = numeros[i].replace('𝝅', pi)
     }
-    else if (numeros[i].includes("e")) {
+    if (numeros[i].includes("e")) {
       let e = Math.E
-      numeros[i] = `${e}`
+      numeros[i] = numeros[i].replace('e', e)
     }
-    else if (numeros[i].startsWith('sin(')) {
+    if (numeros[i].startsWith('sin(')) {
       let value = numeros[i].slice(4, numeros[i].length - 1)
       let seno
       if (degree) {
